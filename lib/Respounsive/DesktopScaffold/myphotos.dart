@@ -16,31 +16,31 @@ class MyPhotos extends StatefulWidget {
 class _MyPhotosState extends State<MyPhotos> {
   // List to store the image paths or URLs
   List<String> _imagePaths = [
-    'assets/Ant.jpg',
-    'assets/dharika.jpg',
-    'assets/eecha.jpg',
-    'assets/flower.jpg',
-    'assets/mashroom.jpg',
-    'assets/theeppetti.jpg',
-    'assets/thimbi.JPG',
-    'assets/vand.jpg',
-    'assets/yellowflower.jpg',
-    'assets/ant2.jpg',
-    'assets/beerorang.jpg',
-    'assets/butterfly.jpg',
-    'assets/cat.jpg',
-    'assets/cherry.jpg',
-    'assets/click.jpg',
-    'assets/ecah2.jpg',
-    'assets/kingfiher.jpg',
-    'assets/mash2.jpg',
-    'assets/redbeer.jpg',
-    'assets/sku.jpg',
-    'assets/spider.jpg',
-    'assets/threetheeppetti.jpg',
-    'assets/waterdrop.jpg',
-    'assets/whiteflower.jpg',
-    'assets/yellowflower2.jpg',
+    'Assets/Ant.jpg',
+    'Assets/dharika.jpg',
+    'Assets/eecha.jpg',
+    'Assets/flower.jpg',
+    'Assets/mashroom.jpg',
+    'Assets/theeppetti.jpg',
+    'Assets/thimbi.JPG',
+    'Assets/vand.jpg',
+    'Assets/yellowflower.jpg',
+    'Assets/ant2.jpg',
+    'Assets/beerorang.jpg',
+    'Assets/butterfly.jpg',
+    'Assets/cat.jpg',
+    'Assets/cherry.jpg',
+    'Assets/click.jpg',
+    'Assets/ecah2.jpg',
+    'Assets/kingfiher.jpg',
+    'Assets/mash2.jpg',
+    'Assets/redbeer.jpg',
+    'Assets/sku.jpg',
+    'Assets/spider.jpg',
+    'Assets/threetheeppetti.jpg',
+    'Assets/waterdrop.jpg',
+    'Assets/whiteflower.jpg',
+    'Assets/yellowflower2.jpg',
   ];
 
   Future<void> _downloadImage(String assetPath, String fileName) async {
@@ -120,15 +120,12 @@ class _MyPhotosState extends State<MyPhotos> {
                             ),
                           ],
                         ),
-                        child: FadeInUp(
-                          duration: Duration(microseconds: 1900),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              _imagePaths[
-                                  index], // Access the image path from the list
-                              fit: BoxFit.cover, // Cover the entire cell
-                            ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            _imagePaths[
+                                index], // Access the image path from the list
+                            fit: BoxFit.cover, // Cover the entire cell
                           ),
                         ),
                       ),

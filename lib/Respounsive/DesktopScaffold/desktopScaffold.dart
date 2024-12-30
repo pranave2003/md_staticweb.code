@@ -27,6 +27,16 @@ class DashboardPage extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Works",
+                style: GoogleFonts.podkova(
+                    fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
           MyPhotos(),
           SizedBox(
             height: 30,

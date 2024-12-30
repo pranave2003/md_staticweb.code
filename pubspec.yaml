@@ -64,6 +64,32 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - Assets/Ant.jpg
+    - Assets/dharika.jpg
+    - Assets/eecha.jpg
+    - Assets/flower.jpg
+    - Assets/mashroom.jpg
+    - Assets/theeppetti.jpg
+    - Assets/thimbi.JPG
+    - Assets/vand.jpg
+    - Assets/yellowflower.jpg
+    - Assets/ant2.jpg
+    - Assets/beerorang.jpg
+    - Assets/butterfly.jpg
+    - Assets/cat.jpg
+    - Assets/cherry.jpg
+    - Assets/click.jpg
+    - Assets/ecah2.jpg
+    - Assets/kingfiher.jpg
+    - Assets/mash2.jpg
+    - Assets/redbeer.jpg
+    - Assets/sku.jpg
+    - Assets/spider.jpg
+    - Assets/threetheeppetti.jpg
+    - Assets/waterdrop.jpg
+    - Assets/whiteflower.jpg
+    - Assets/yellowflower2.jpg
+    - Assets/LOGO.jpg
     - Assets/
 
 

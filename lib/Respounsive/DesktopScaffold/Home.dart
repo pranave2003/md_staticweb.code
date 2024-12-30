@@ -363,9 +363,9 @@ class _HomeState extends State<Home> {
                         image: DecorationImage(
                             image: AssetImage("Assets/LOGO.jpg"))),
                   ),
-                  Column(
-                    children: [Text("MD")],
-                  )
+                  Expanded(
+                      child: Text(
+                          "We bring your vision to life by capturing timeless moments through a unique perspective. Each frame we create tells a story, blending creativity, precision, and passion. Our focus is on transforming ordinary scenes into extraordinary memories, delivering exceptional results that resonate with emotions and last a lifetime"))
                 ],
               )
             ],
