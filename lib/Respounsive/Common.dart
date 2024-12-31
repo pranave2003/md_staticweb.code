@@ -31,6 +31,7 @@ class _InstagramState extends State<Instagram> {
       throw 'Could not launch $instagramUri';
     }
   }
+  //
 
   @override
   Widget build(BuildContext context) {
@@ -57,11 +58,11 @@ class _InstagramState extends State<Instagram> {
                   onTap: _launchInstagram,
                   child: Container(
                     height: widget.hight,
-                    width: 50,
+                    width: widget.width,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage("Assets/instagram.png"),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   ),
@@ -86,6 +87,44 @@ class _InstagramState extends State<Instagram> {
             ],
           ),
         )
+      ],
+    );
+  }
+}
+
+
+
+class Magicaldronelogo extends StatefulWidget {
+  const Magicaldronelogo({super.key,required this.hight,required this.width});
+final hight;
+final width;
+  @override
+  State<Magicaldronelogo> createState() => _MagicaldronelogoState();
+}
+
+class _MagicaldronelogoState extends State<Magicaldronelogo> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+            padding: const EdgeInsets.all(20),
+            child: FadeInLeft(
+              duration: Duration(milliseconds: 1900),
+              child: Container(
+                height: widget.hight,
+                width: widget.width,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("Assets/Magicaldrone.png"),
+                        fit: BoxFit.cover)),
+              ),
+              // child: Text("MAGICAL DRONE",
+              //     style: GoogleFonts.sixtyfour(
+              //         fontSize: 35,
+              //         color: Colors.black,
+              //         fontWeight: FontWeight.bold)),
+            )),
       ],
     );
   }

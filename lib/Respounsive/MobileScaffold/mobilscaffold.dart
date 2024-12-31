@@ -1,10 +1,15 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
+import 'package:md/Respounsive/MobileScaffold/MobileHome.dart';
 
 import '../../Constance.dart';
+import '../Common.dart';
+import '../DesktopScaffold/Contactus.dart';
 
+import 'Mobtoys.dart';
+import 'myphotosmobile.dart';
 
 class Mobile_DashboardPage extends StatelessWidget {
   final ScrollController scrollController;
@@ -18,54 +23,20 @@ class Mobile_DashboardPage extends StatelessWidget {
       child: ListView(
         controller: scrollController,
         children: [
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.red,
+          Mobilehome(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Works",
+                style: GoogleFonts.podkova(
+                    fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.grey,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.green,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.orange,
-            child: Column(
-              children: [Text("Skills")],
-            ),
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.yellow,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.blue,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.green.shade900,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.pink,
-          ),
-          Container(
-            height: 600,
-            width: 300,
-            color: Colors.black87,
-          ),
+          MyPhotos_mobile(),
+          mobtoys(),
+          ContactUsPage()
         ],
       ),
     );
@@ -96,31 +67,41 @@ class _MobilscaffoldState extends State<Mobilscaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: Myappbar,
       drawer: Drawer(
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.white,
         child: Column(
           children: [
             SizedBox(height: 30),
             CircleAvatar(
               backgroundColor: Color(0xff46348EFF),
+              backgroundImage: AssetImage("Assets/logoblack.JPG"),
               radius: 60,
             ),
             SizedBox(height: 20),
-            Text(
-              "PRANAV . E",
-              style: GoogleFonts.nothingYouCouldDo(
-                color: Colors.white,
-                fontSize: 30,
+            FadeInLeft(
+              duration: Duration(milliseconds: 1900),
+              child: Text(
+                "Magical Drone",
+                style: GoogleFonts.nothingYouCouldDo(
+                  color: Colors.black,
+                  fontSize: 30,
+                ),
               ),
             ),
-            Text(
-              "FLUTTER DEVELOPER",
-              style: GoogleFonts.unna(
-                color: Colors.white,
-                fontSize: 25,
+            FadeInLeft(
+              duration: Duration(milliseconds: 1900),
+              child: Text(
+                "since 2022",
+                style: GoogleFonts.unna(
+                  color: Colors.blueGrey,
+                  fontSize: 25,
+                ),
               ),
+            ),
+            SizedBox(
+              height: 30,
             ),
             TextButton(
               onPressed: () {
@@ -143,104 +124,9 @@ class _MobilscaffoldState extends State<Mobilscaffold> {
             ),
             TextButton(
               onPressed: () {
-                scrollTo(600);
-                Navigator.of(context).pop();
-              }, // Scroll to Grey Container
-              style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(
-                  GoogleFonts.unna(fontSize: 15),
-                ),
-                foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    return states.contains(MaterialState.hovered)
-                        ? Colors.red
-                        : Colors.grey;
-                  },
-                ),
-              ),
-              child: const Text("ABOUT"),
-            ),
-            TextButton(
-              onPressed: () {
                 scrollTo(1200);
                 Navigator.of(context).pop();
-              }, // Scroll to Orange Container
-              style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(
-                  GoogleFonts.unna(fontSize: 15),
-                ),
-                foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    return states.contains(MaterialState.hovered)
-                        ? Colors.red
-                        : Colors.grey;
-                  },
-                ),
-              ),
-              child: const Text("Service"),
-            ),
-            TextButton(
-              onPressed: () {
-                scrollTo(1800);
-                Navigator.of(context).pop();
-              }, // Scroll to Orange Container
-              style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(
-                  GoogleFonts.unna(fontSize: 15),
-                ),
-                foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    return states.contains(MaterialState.hovered)
-                        ? Colors.red
-                        : Colors.grey;
-                  },
-                ),
-              ),
-              child: const Text("Skills"),
-            ),
-            TextButton(
-              onPressed: () {
-                scrollTo(2400);
-                Navigator.of(context).pop();
-              }, // Scroll to Orange Container
-              style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(
-                  GoogleFonts.unna(fontSize: 15),
-                ),
-                foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    return states.contains(MaterialState.hovered)
-                        ? Colors.red
-                        : Colors.grey;
-                  },
-                ),
-              ),
-              child: const Text("Education"),
-            ),
-            TextButton(
-              onPressed: () {
-                scrollTo(3000);
-                Navigator.of(context).pop();
-              }, // Scroll to Orange Container
-              style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(
-                  GoogleFonts.unna(fontSize: 15),
-                ),
-                foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    return states.contains(MaterialState.hovered)
-                        ? Colors.red
-                        : Colors.grey;
-                  },
-                ),
-              ),
-              child: const Text("Experience"),
-            ),
-            TextButton(
-              onPressed: () {
-                scrollTo(3600);
-                Navigator.of(context).pop();
-              }, // Scroll to Orange Container
+              }, // Scroll to Grey Container
               style: ButtonStyle(
                 textStyle: MaterialStateProperty.all<TextStyle>(
                   GoogleFonts.unna(fontSize: 15),
@@ -257,7 +143,7 @@ class _MobilscaffoldState extends State<Mobilscaffold> {
             ),
             TextButton(
               onPressed: () {
-                scrollTo(4200);
+                scrollTo(2850);
                 Navigator.of(context).pop();
               }, // Scroll to Orange Container
               style: ButtonStyle(
@@ -272,21 +158,19 @@ class _MobilscaffoldState extends State<Mobilscaffold> {
                   },
                 ),
               ),
-              child: const Text("Contact"),
+              child: const Text("Contact Us"),
             ),
+            Spacer(),
+            Instagram(
+              hight: 30,
+              width: 30,
+            )
           ],
         ),
       ),
       extendBodyBehindAppBar: true,
       body: Stack(
         children: [
-          LottieBuilder.asset(
-            // Replace DecorationImage with LottieBuilder
-            "Assets/Animation - 1729701670041.json",
-            fit: BoxFit.cover,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-          ),
           // Other content on top of the animation
           Row(
             children: [

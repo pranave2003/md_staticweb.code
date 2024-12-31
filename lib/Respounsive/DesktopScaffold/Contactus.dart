@@ -35,24 +35,18 @@ class ContactUsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FadeInDown(
-                duration: Duration(milliseconds: 1900),
-                child: Text(
-                  "Get in Touch",
-                  style: GoogleFonts.poppins(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
+              Text(
+                "Get in Touch",
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 10),
-              FadeInDown(
-                duration: Duration(milliseconds: 1900),
-                child: Text(
-                  "Feel free to reach out by filling the form below. We’ll get back to you as soon as possible.",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16, color: Colors.grey[700]),
-                ),
+              Text(
+                "Feel free to reach out by filling the form below. We’ll get back to you as soon as possible.",
+                style: GoogleFonts.poppins(
+                    fontSize: 16, color: Colors.grey[700]),
               ),
               SizedBox(height: 30),
               Form(

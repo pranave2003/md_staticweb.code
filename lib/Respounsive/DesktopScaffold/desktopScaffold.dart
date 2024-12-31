@@ -1,14 +1,8 @@
-import 'dart:math';
-
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:md/Respounsive/DesktopScaffold/Contactus.dart';
 import 'package:md/Respounsive/DesktopScaffold/Home.dart';
-import 'package:md/Respounsive/DesktopScaffold/Mdwork.dart';
 import 'package:md/Respounsive/DesktopScaffold/TOYs.dart';
-
 import 'myphotos.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -24,6 +18,25 @@ class DashboardPage extends StatelessWidget {
         controller: scrollController,
         children: [
           Home(),
+          Row(
+            children: [
+              Container(
+                height: 400,
+                width: 400,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image:
+                        DecorationImage(image: AssetImage("Assets/LOGO.jpg"))),
+              ),
+              Expanded(
+                  child: Text(
+                      "We bring your vision to life by capturing timeless moments through a unique perspective. Each frame we create tells a story, blending creativity, precision, and passion. Our focus is on transforming ordinary scenes into extraordinary memories, delivering exceptional results that resonate with emotions and last a lifetime",
+                      style: GoogleFonts.podkova())),
+              SizedBox(
+                width: 100,
+              )
+            ],
+          ),
           SizedBox(
             height: 50,
           ),
@@ -65,8 +78,8 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
 
   final List<double> _sectionPositions = [
     0, // Home
-    1100, // About
-    2700, // Service
+    1300, // About
+    2900, // Service
     // Contact
   ];
 

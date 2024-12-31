@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'Respounsive/Common.dart';
+
 var Myappbar = AppBar(
   backgroundColor: Colors.transparent,
+
   elevation: 0,
-  iconTheme: const IconThemeData(color: Colors.white),
+  iconTheme: const IconThemeData(color: Colors.black),
 );
 
 var Mydrawer = Drawer(
@@ -23,7 +26,7 @@ var Mydrawer = Drawer(
       ),
       Text(
         "PRANAV.E",
-        style: GoogleFonts.abrilFatface(color: Colors.white, fontSize: 30),
+        style: GoogleFonts.abrilFatface(color: Colors.black, fontSize: 30),
       ),
       TextButton(
         onPressed: () {},
@@ -40,7 +43,9 @@ var Mydrawer = Drawer(
           ),
         ),
         child: const Text("Home"),
-      )
+      ),
+      Spacer(),
+      Instagram(hight: 100,width: 100,)
     ],
   ),
 );

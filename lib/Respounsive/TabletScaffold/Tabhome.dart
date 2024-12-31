@@ -4,22 +4,23 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:md/Respounsive/Common.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+import '../Common.dart';
+
+class Tabhome extends StatefulWidget {
+  const Tabhome({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Tabhome> createState() => _TabhomeState();
 }
 
-class _HomeState extends State<Home> {
+class _TabhomeState extends State<Tabhome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-          height: 800,
+          height: 1200,
           width: double.infinity,
           decoration: BoxDecoration(boxShadow: [
             BoxShadow(
@@ -31,38 +32,51 @@ class _HomeState extends State<Home> {
           ], borderRadius: BorderRadius.circular(30), color: Colors.white),
           child: Column(
             children: [
-              Magicaldronelogo(width: 700,hight: 100,),
+          Row(
+          children: [
+          Padding(
+          padding: const EdgeInsets.all(20),
+          child: FadeInLeft(
+            duration: Duration(milliseconds: 1900),
+            child: Container(
+              height: 100,
+              width: 300,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("Assets/Magicaldrone.png"),
+                      fit: BoxFit.fill)),
+            ),
+            // child: Text("MAGICAL DRONE",
+            //     style: GoogleFonts.sixtyfour(
+            //         fontSize: 35,
+            //         color: Colors.black,
+            //         fontWeight: FontWeight.bold)),
+          )),
+      ],
+    ),
               Row(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: FadeInDown(
+                      duration: Duration(milliseconds: 1900),
+                      child: SizedBox(
+                        width: 400,
+                        child: Text(
+                            "Magical Drone is a photography platform driven by innovation, quality, safety, and sustainability, capturing breathtaking visuals and transforming moments into masterpieces..........",
+                            style: GoogleFonts.podkova(
+                                fontSize: 25, color: Colors.grey.shade900)),
                       ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(50),
-                            child: FadeInDown(
-                              duration: Duration(milliseconds: 1900),
-                              child: SizedBox(
-                                width: 200,
-                                child: Text(
-                                    "Magical Drone is a photography platform driven by innovation, quality, safety, and sustainability, capturing breathtaking visuals and transforming moments into masterpieces..........",
-                                    style: GoogleFonts.podkova(
-                                        fontSize: 20,
-                                        color: Colors.grey.shade900)),
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
+                    ),
                   ),
-                  SizedBox(
-                    width: 100,
-                  ),
+                ],
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                   Column(
                     children: [
                       Row(
@@ -73,8 +87,8 @@ class _HomeState extends State<Home> {
                               child: FadeInLeft(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: 40,
+                                  height: 40,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -101,8 +115,8 @@ class _HomeState extends State<Home> {
                           FadeInUp(
                             duration: Duration(milliseconds: 1900),
                             child: Container(
-                              width: 130,
-                              height: 130,
+                              width: 50,
+                              height: 50,
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
@@ -130,8 +144,8 @@ class _HomeState extends State<Home> {
                               child: FadeInRight(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: 40,
+                                  height: 40,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -166,8 +180,8 @@ class _HomeState extends State<Home> {
                               child: FadeInLeft(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 130,
-                                  height: 130,
+                                  width: 50,
+                                  height: 50,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -194,8 +208,8 @@ class _HomeState extends State<Home> {
                           FadeInUp(
                             duration: Duration(milliseconds: 1900),
                             child: Container(
-                              width: 170,
-                              height: 170,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
@@ -223,8 +237,8 @@ class _HomeState extends State<Home> {
                               child: FadeInRight(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 130,
-                                  height: 130,
+                                  width: 50,
+                                  height: 50,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -258,8 +272,8 @@ class _HomeState extends State<Home> {
                               child: FadeInLeft(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: 40,
+                                  height: 40,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -287,8 +301,8 @@ class _HomeState extends State<Home> {
                           FadeInUp(
                             duration: Duration(milliseconds: 1900),
                             child: Container(
-                              width: 130,
-                              height: 130,
+                              width: 50,
+                              height: 50,
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
@@ -316,8 +330,8 @@ class _HomeState extends State<Home> {
                               child: FadeInRight(
                                 duration: Duration(milliseconds: 1900),
                                 child: Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: 50,
+                                  height: 50,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -341,9 +355,32 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
+              SizedBox(
+                height: 50,
+              ),
+              Divider(),
+              Row(
+                children: [
+                  Container(
+                    height: 300,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        image: DecorationImage(
+                            image: AssetImage("Assets/LOGO.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                ],
+              ),
+              Expanded(
+                  child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                    "We bring your vision to life by capturing timeless moments through a unique perspective. Each frame we create tells a story, blending creativity, precision, and passion. Our focus is on transforming ordinary scenes into extraordinary memories, delivering exceptional results that resonate with emotions and last a lifetime", style: GoogleFonts.podkova()),
+              ))
             ],
           )),
     );
